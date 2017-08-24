@@ -1,0 +1,41 @@
+﻿@import "base.scss";
+@import "colours.scss";
+
+.box {
+    @include border-radius(8px);
+}
+
+/*$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}*/
+
+.bg-light-blue{
+    background-color: $light-blue;
+}
+
+.bg-light-orange{
+    background-color: $light-orange;
+}
+
+.list-inline {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.list-inline li{
+    /*float: left;*/
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    margin-right: 4px;
+    margin-top: 4px
+}
+
+.tile{
+    width: 200px;
+    height: 150px;
+}

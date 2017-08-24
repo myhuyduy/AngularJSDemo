@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="output/vendor.bundle.js"></script>
+    <script src="output/angdemo.version_1_0.bundle.js"></script>
+</head>
+<body>
+<div ng-app="mainApp" ng-controller="mainCtrl">
+    <p>
+        <h3>Tiles componet...</h3>
+    </p>
+    <ul class="list-inline">
+        <li ng-class="$even ? 'bg-light-blue' : 'bg-light-orange'" class="box tile" ng-repeat="product in products">
+            <tiles item="{title: product.Title, description: product.Description}"></tiles>
+            <button>Test</button>
+        </li>
+    </ul>
+    <p>
+        <h3>Tiles componet wrap inside product component...</h3>
+    </p>
+    <div>
+        <products></products>
+    </div>
+</div>
+</body>
+</html>

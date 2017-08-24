@@ -1,0 +1,6 @@
+﻿<ul class="list-inline">
+    <li ng-class="$even ? 'bg-light-blue' : 'bg-light-orange'" class="box tile" ng-repeat="product in $ctrl.products">
+        <tiles item="{title: product.Title, description: product.Description}"></tiles>
+        <button>Test</button>
+    </li>
+</ul>

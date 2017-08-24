@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="output/app.bundle.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div ng-controller="Navigation">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="" ng-click="getAlert()">Home</a></li>
+                    <li><a href="#!user1">User 1</a></li>
+                    <li><a href="#!user2">User 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div ng-controller="MyCtrl">
+        <button type="button" class="btn" ng-click="getAlert()">Click me</button>
+
+        <p>Enter your name: <input type="text" ng-model="name" /> </p>
+        <p>Enter your password: <input type="password" ng-model="password" /></p>
+
+        <p>{{name | uppercase }}</p>
+        <div ng-show="visible">
+            <p>Hello</p>
+        </div>
+
+        Enter your name: <input type="text" ng-model="book.name" />
+    </div>
+
+    <div ng-view></div>
+
+    <script type="text/ng-template" id="user1.htm">
+        <h2> Add User 1</h2>
+        {{message}}
+        <div ng-controller="BlogController">
+            <button type="button" class="btn" ng-click="save()">Save</button>
+
+            <ol>
+                <li ng-repeat="blog in blogs">
+                    <p>{{ 'Blog Id: ' + blog.BlogId }}</p>
+                    <p>{{ 'Blog Name: ' + blog.Name }}</p>
+                </li>
+            </ol>
+
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="user2.htm">
+        <h2> Add User 2</h2>
+        {{message}}
+    </script>
+
+</body>
+</html>
